@@ -45,7 +45,7 @@ public class ActivityUpdatesObservableOnSubscribe extends BaseActivityObservable
     }
 
     private PendingIntent getReceiverPendingIntent() {
-        return PendingIntent.getBroadcast(context, 0, new Intent(ACTION_ACTIVITY_DETECTED), PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, new Intent(ACTION_ACTIVITY_DETECTED), PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
     @Override
